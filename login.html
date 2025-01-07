@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="shortcut icon" href="gambar2.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uas.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Aplikasi" class="logo">
+        <nav>
+            <p style="font-size: 13;"><pre>
+<a href="index.html">Beranda</a>         <a href="profilUAS.html">Profil</a>         <a href="login.html">Login</a></pre>  
+                                            </p>
+        </nav>
+    </header>  
+    <main>                                                                                                                                                                                                                                                                                                                           
+    <br>
+    <br>
+    <div class="login-container">
+        <h2>Login</h2>
+        <ul><input type="text" id="username" placeholder="Username" required></ul>
+        <ul><input type="password" id="password" placeholder="Password" required></ul>
+        <ul><button onclick="login()">Masuk</button></ul>
+        <div id="error-message" class="error"></div>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+
+            // Ganti dengan username dan password yang benar
+        const correctUsername = '241011700359';
+        const correctPassword = '130606';
+
+        if (username === correctUsername && password === correctPassword) {
+            window.open("transaksi.html","menu");
+            // Redirect atau lakukan aksi lain setelah login berhasil
+        } else {
+            errorMessage.textContent = 'Username atau password salah!';
+        }
+    }
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</main>
+    <footer>
+        <p>&copy; 2024 Aplikasi Simpan Pinjam By annatasya</p>
+    </footer>
+</body>
+</html>

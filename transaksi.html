@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="shortcut icon" href="gambar2.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="uas.css">
+    <script src="script.js" defer></script>
+    <title>Transaksi</title>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Aplikasi" class="logo">
+        <nav>
+            <p style="font-size: 13;"><pre>
+<a href="index.html">Beranda</a>         <a href="profilUAS.html">Profil</a>         <a href="login.html">Login</a></pre>  
+                            </p>
+        </nav>
+
+        <script>
+            function verifyPassword() {
+                const correctPassword = "130606"; // Password yang benar
+                const inputPassword = document.getElementById("password").value;
+                const message = document.getElementById("message");
+    
+                if (inputPassword === correctPassword) {
+                    message.textContent = "Password benar! Anda akan diarahkan ke halaman transaksi.";
+                    message.className = "success";
+                    setTimeout(() => {
+                        window.location.href = "daftar_transaksi.html"; // Ganti dengan nama file yang sesuai
+                    }, 2000); // Arahkan setelah 2 detik
+                } else {
+                    message.textContent = "Password salah! Silakan coba lagi.";
+                    message.className = "error";
+            }
+        }
+    </script>
+    </header>
+    <main>
+<br>
+<br>
+    <ul><h2>Verifikasi Transaksi</h2></ul>
+    <br>
+<form onsubmit="event.preventDefault(); verifyPassword();">
+    <ul><label for="password">Masukkan Password:</label></ul>
+    <ul><input type="password" id="password" required>
+    <button type="submit">Verifikasi</button></ul>
+</form>
+<p id="message"></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</main>
+    <footer>
+        <p>&copy; 2024 Aplikasi Simpan Pinjam By annatasya</p><div class="login-container">
+    </footer>
+</body>
+</html>

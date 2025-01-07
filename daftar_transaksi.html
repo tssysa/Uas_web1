@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="shortcut icon" href="gambar2.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Transaksi - Aplikasi Simpan Pinjam</title>
+    <link rel="stylesheet" href="uas.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo Aplikasi" id="logo">
+        <nav>
+            <p style="font-size: 13;"><pre>
+<a href="index.html">Beranda</a>         <a href="profilUAS.html">Profil</a>         <a href="login.html">Login</a></pre>  
+                            </p>
+            
+        </nav>
+    </header>
+
+    <main>
+        <br>
+<br>
+<br>
+<br>
+        <h1>Daftar Transaksi</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Transaksi</th>
+                    <th>Jumlah</th>
+                    <th>Kategori</th>
+                </tr>
+            </thead>
+            <tbody id="daftarTransaksi">
+                <!-- Data transaksi akan ditambahkan di sini -->
+            </tbody>
+        </table>
+        <p><a href="transaksi.html">Kembali ke Form Transaksi</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Aplikasi Simpan Pinjam</p>
+    </footer>
+
+    <script>
+        // Contoh data transaksi (ini bisa diambil dari database atau penyimpanan lokal)
+        const transaksi = [
+            { nama: "Simpan Uang", jumlah: 100000, kategori: "Simpanan" },
+            { nama: "Pinjam Uang", jumlah: 50000, kategori: "Pinjaman" },
+            { nama: "Simpan Emas", jumlah: 200000, kategori: "Simpanan" },
+            { nama: "Pinjam Buku", jumlah: 0, kategori: "Pinjaman" }
+        ];
+
+        // Menampilkan data transaksi di tabel
+        const tableBody = document.getElementById('daftarTransaksi');
+        transaksi.forEach(item => {
+            const row = tableBody.insertRow();
+            row.insertCell(0).innerText = item.nama;
+            row.insertCell(1).innerText = item.jumlah.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
+            row.insertCell(2).innerText = item.kategori;
+        });
+    </script>
+</body>
+</html>
